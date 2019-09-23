@@ -63,7 +63,7 @@ def negative(img_name=None, negatived_img_name=None):
 def logarithmic(img_name=None, negatived_img_name=None):
     img = read_img_grey_scale(img_name)
     C = 255 / math.log(256)
-    res = C * np.log(img + [1])  # + 1?
+    res = C * np.log(img + [1])
     res = res.astype(int)
     return (res, get_img_name(img_name, 'logari'))
 
